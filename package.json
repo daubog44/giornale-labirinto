@@ -5,7 +5,7 @@
   "name": "prova",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel index.html && watch css/mains.scss",
+    "start": "parcel index.html && watch ./css/mains.scss",
     "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "",
