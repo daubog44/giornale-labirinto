@@ -5,8 +5,8 @@
   "name": "prova",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel prova.html && watch css/mains.scss",
-    "build": "parcel build prova.html --dist-dir ./dist"
+    "start": "parcel index.html && watch css/mains.scss",
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "",
   "license": "ISC",
