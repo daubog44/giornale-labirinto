@@ -1,0 +1,20 @@
+{
+  "dependencies87": {
+    "parcel": "^2.3.2"
+  },
+  "name": "prova",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel prova.html && watch css/mains.scss",
+    "build": "parcel build prova.html --dist-dir ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "parcel": "^2.3.2"
+  }
+}

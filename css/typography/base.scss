@@ -1,0 +1,142 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: teal;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+.card {
+  position: relative;
+  top: 0px;
+  height: 100%;
+  perspective: 90rem;
+}
+
+.card__side {
+  position: relative;
+  top: 0px;
+  height: 100%;
+  backface-visibility: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1.5rem 4rem;
+  background-color: rgb(207, 198, 199);
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  display: grid;
+  grid-template-rows: 17rem 100rem 40rem 3rem;
+  grid-template-columns:
+    3vw 26rem 1rem repeat(5, [col-start] minmax(min-content, 25rem) [col-end])
+    3vw;
+  transition: all 0.8s ease 0s;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-image: initial;
+  border-radius: 3px;
+  overflow: hidden;
+
+  @include respond(tab-landscape) {
+    margin: 0;
+  }
+
+  @include respond(lay) {
+    grid-template-rows: 17rem minmax(min-content, 114rem) 40rem 10rem;
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: 3vw 94vw 3vw;
+
+    grid-template-rows: 17rem minmax(min-content, 160rem) 60rem 7rem;
+  }
+
+  @include respond(smally) {
+    grid-template-rows: 17rem minmax(min-content, 190rem) 60rem 7rem;
+  }
+
+  @include respond(phone) {
+    grid-template-rows: 17rem minmax(min-content, 210rem) 80rem 7rem;
+  }
+
+  @include respond(phone-small) {
+    grid-template-rows:
+      17rem minmax(min-content, 220rem) minmax(min-content, 70rem)
+      10rem;
+  }
+
+  @include respond(phone-smallest) {
+    grid-template-rows:
+      17rem minmax(min-content, 254rem) minmax(min-content, 70rem)
+      10rem;
+  }
+
+  @include respond(finally-phone) {
+    grid-template-rows:
+      17rem minmax(min-content, 280rem) minmax(min-content, 70rem)
+      10rem;
+  }
+}
+
+.card__side--back {
+  position: absolute;
+  top: 0px;
+  transform: rotateY(180deg);
+  margin: 0px 15rem;
+
+  @include respond(tab-landscape) {
+    margin: 0;
+  }
+}
+
+.section__side--front {
+  position: absolute;
+  top: 0;
+  transform: rotateY(-180deg);
+}
+
+.btn {
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 2rem;
+  left: 5rem;
+  z-index: 1000;
+}
+
+a {
+  color: deeppink;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background-color: deeppink;
+  color: white;
+}

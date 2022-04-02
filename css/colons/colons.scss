@@ -1,0 +1,98 @@
+.colon2 {
+  font-size: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  grid-row: 2/3;
+  grid-column: 4/6;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  position: absolute;
+  top: 60.4rem;
+
+  @include respond(tab-port) {
+    grid-column: 2/3;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-top: -10rem;
+  }
+
+  @include respond(smally) {
+    margin-top: 0rem;
+  }
+
+  @include respond(tab-land) {
+    top: 62rem;
+  }
+
+  @include respond(phone-smallest) {
+    margin-top: 10rem;
+  }
+}
+
+.contain-img-colon3 {
+  height: 30rem;
+  width: 100%;
+  grid-row: 2/3;
+  grid-column: 6/7;
+  position: relative;
+  top: 64rem;
+  display: flex;
+
+  @include respond(tab-port) {
+    grid-column: 2/3;
+    background-image: url("../img/labirinto.jpg") !important;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-size: cover;
+  }
+
+  @include respond(smally) {
+    margin-top: 13rem;
+  }
+
+  @include respond(phone) {
+    margin-top: 20rem;
+  }
+
+  @include respond(phone-smallest) {
+    margin-top: 40rem;
+  }
+}
+
+.contain-img-colon3 img {
+  @include respond(tab-port) {
+    visibility: hidden;
+  }
+  height: 100%;
+  width: 100%;
+}
+
+.colon4 {
+  font-size: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  grid-row: 2/3;
+  grid-column: 7/9;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  position: absolute;
+  top: 38rem;
+
+  @include respond(tab-port) {
+    top: 95rem;
+    grid-column: 2/3;
+    margin: 0;
+  }
+
+  @include respond(smally) {
+    margin-top: 13rem;
+  }
+
+  @include respond(phone) {
+    margin-top: 20rem;
+  }
+
+  @include respond(phone-smallest) {
+    margin-top: 40rem;
+  }
+}

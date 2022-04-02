@@ -1,0 +1,46 @@
+.middle-title {
+  grid-row: 2/3;
+  grid-column: 4/7;
+  position: absolute;
+  top: 38rem;
+  height: fit-content;
+  width: 100%;
+  font-size: 5.2rem;
+
+  @include respond(tab-port) {
+    grid-column: 2/3;
+  }
+}
+
+.sub-title {
+  margin-top: 1.1rem;
+  font-size: 2rem;
+}
+
+.container-middle {
+  grid-row: 2/3;
+  grid-column: 4/7;
+  margin-left: 2rem;
+  height: fit-content;
+
+  @include respond(tab-port) {
+    grid-column: 2/3;
+  }
+}
+
+figcaption {
+  text-align: right;
+  margin-right: 5rem;
+}
+
+@include respond(phone) {
+  .sub-title__let {
+    margin-top: 15rem;
+  }
+}
+
+@include respond(phone-smallest) {
+  .sub-title__let {
+    margin-top: 24rem;
+  }
+}
